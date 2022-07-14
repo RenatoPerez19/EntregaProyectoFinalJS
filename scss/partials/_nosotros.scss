@@ -1,0 +1,70 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+
+.bodynosotros{
+    background-color: #588c7e;
+}
+
+
+header{
+    .logo{
+        @include logo;
+    }
+        nav{
+            @include principalnav;
+        }
+        a{
+            font-size: $letra;
+            color: $color-letra;
+            text-decoration: none;
+            font-family: $tipo-de-letra;
+        } 
+        
+    }
+
+.titulo_nosotros{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: $centrar-texto;
+    font-size:$letra-large ;
+    color: rgba(16, 17, 17, 0.986);
+    margin: 15px;
+    padding: 20px;
+    text-decoration:overline;
+    margin: 20px;
+    
+}
+
+.titulo_dosnosotros{
+    text-align: $centrar-texto;
+    font-family: $tipo-de-letra;
+    font-size: 20px;
+    padding: 13px;
+    float: left;
+}
+
+.parrafonosotros{
+    text-align: $centrar-texto;
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+    font-family: $tipo-de-letra;
+}
+
+.usuarios{
+    @include flexibilizar-centrar;
+    padding:10px;
+    div{
+        box-shadow: 2px 4px 10px 0 black;
+        border-color: rgb(95, 151, 153);
+        border-style: solid;
+        width: 19%;
+        background-color: #fff;
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+

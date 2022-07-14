@@ -1,0 +1,95 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+
+body{
+    background-image: linear-gradient(to right , white,rgb(126, 157, 214)  ,rgba(55, 161, 231, 0.863) , rgba(45, 145, 240, 0.801))
+}
+
+
+header{
+    .logo{
+        @include logo;
+
+    }
+        nav{
+            @include principalnav;
+        }
+        a{
+            font-size: $letra;
+            color: $color-letra;
+            text-decoration: none;
+            font-family: $tipo-de-letra;
+        } 
+        
+    }
+
+.main_newin{
+    p{
+        @include h1index
+    }
+}
+
+
+.indumentaria{
+    @include flexibilizar-centrar;
+    div{
+        text-align: center;
+    color: rgb(6, 68, 6);
+    box-shadow: 2px 4px 10px 0 black;
+    border-color: rgb(31, 31, 31);
+    border-style: solid;
+    width: 19%;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction:column;
+    }
+    strong{
+        color:$color-letra;
+        text-align: $centrar-texto;
+    }
+}
+
+footer{
+    @include footer;
+    div{
+        color: $color-letra;
+        font-size: larger;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        width: 15%;
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction:column;
+    }
+    a{
+        text-decoration: none;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-letra;
+    }
+}
+
+.marcasnew{
+    background-color: black;
+}
+
+
+.marca1{
+    font-size: 10px;
+    display: flex;
+    justify-content:space-around;
+    gap:10px;
+    flex-wrap: wrap;
+    text-align:center;
+    padding: 5%;
+    margin: auto;
+        .botonnew{
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+    }
+}

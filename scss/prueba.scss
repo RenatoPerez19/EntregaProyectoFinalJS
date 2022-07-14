@@ -1,0 +1,20 @@
+@import "variables/variables";
+@import "sass2/condicionales";
+@import "sass2/extend";
+@import "sass2/maps";
+@import "sass2/mixins";
+@import "sass2/operaciones";
+@import "partials/contacto";
+@import "partials/index";
+@import "partials/marcas";
+@import "partials/newiin";
+@import "partials/nosotros";
+
+html {
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    
+}

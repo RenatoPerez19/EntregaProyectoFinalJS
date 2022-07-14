@@ -1,0 +1,82 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+
+header{
+    .logo{
+        @include logo;
+    }
+        nav{
+            @include principalnav;
+        }
+        a{
+            font-size: $letra;
+            color: $color-letra;
+            text-decoration: none;
+            font-family: $tipo-de-letra;
+        } 
+        
+    }
+
+.div_h1{
+    h1{
+        text-align: $centrar-texto;
+        font-size: 40px;
+        font-family:$tipo-de-letra;
+        padding: 1cm;
+    }
+}
+
+.marcas_main{
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding:10px;
+        background-image:  linear-gradient(to right , white,rgb(126, 157, 214)  ,rgba(55, 161, 231, 0.863) , rgba(45, 145, 240, 0.801));
+    }
+    div{
+        text-align: $centrar-texto;
+        color: rgb(2, 2, 2);
+        box-shadow: 2px 4px 10px 0 black;
+        border-color: rgb(31, 31, 31);
+        border-radius: 23px;
+        border-style: solid;
+        width: 19%;
+        background-color: #fff;
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction:column;
+    }
+}
+
+footer{
+    @include footer;
+    div{
+        color: $color-letra;
+        font-size: larger;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        width: 15%;
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction:column;
+    }
+    a{
+        text-decoration: none;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-letra;
+    }
+}
+
+.infomarcas{
+    color:$color-letra;
+    font-size:$tipo-de-letra;
+    text-align: $centrar-texto;
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+}
+

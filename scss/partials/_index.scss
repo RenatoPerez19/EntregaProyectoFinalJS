@@ -1,0 +1,82 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+
+
+.fondoprincipal{
+    background-image: linear-gradient(to right , white,rgb(126, 157, 214)  ,rgba(55, 161, 231, 0.863) , rgba(45, 145, 240, 0.801));
+    display: flex;
+    flex-direction: column;
+    min-height: 100%
+
+}
+
+
+header{
+    .logo{
+        @include logo;
+
+    }
+        nav{
+            @include principalnav;
+        }
+        a{
+            font-size: $letra;
+            color: $color-letra;
+            text-decoration: none;
+            font-family: $tipo-de-letra;
+        } 
+        
+    }
+
+.h1index{
+    @include h1index;
+}
+
+.mainindex{
+    font-size: $anuncio;
+    padding: 25px;
+    margin: 60px;
+    p{
+        font-family: $tipo-de-letra;
+        color: $color-letra;
+    }
+    .boton{
+        background-color:black;
+        color: white;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 20px;
+        font-size: 20px;
+    }
+}
+
+.parrafo2{
+    background-color: black;
+    color: white;
+    margin-top: 40px;
+    padding: 15px;
+    text-align:$centrar-texto;
+    font-size: 30px ;
+    font-family: $tipo-de-letra;
+}
+
+
+footer{
+    @include footer;
+    div{
+        font-size: larger;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        width: 15%;
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction:column;
+    }
+        a{
+        text-decoration: none;
+        font-family:Arial, Helvetica, sans-serif;
+        color: grey;
+    }
+}

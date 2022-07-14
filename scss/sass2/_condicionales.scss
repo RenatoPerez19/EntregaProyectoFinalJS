@@ -1,0 +1,32 @@
+@import "../variables/variables";
+
+
+//body{
+   //@if $vista == desktop{
+       // @media only  screen and (max-width: 1024px) {
+       //     h1{
+      //          font-size: $h1Desktop;
+     //       }
+     //       h3{
+     //           font-size: 35px;
+     //       }
+      //      p{
+      //          font-size: $parrafoDesktop;
+     //       }
+    //    }
+  //  } @else if $vista == mobile {
+  //      @media only screen and (max-width: 767px){
+   //         h1{
+   //             font-size:$h1Mobile;
+  //          }
+  //          h3{
+  //              font-size: 25px;
+  //          }
+  //          p{
+  //              font-size: $parrafoMobile;
+ //           }
+    //    }
+ //   }
+        
+    
+//}

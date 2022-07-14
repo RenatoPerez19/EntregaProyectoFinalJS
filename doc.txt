@@ -1,0 +1,9 @@
+En mi index.html agregue los diversos titulos para cada pages e identificar cada una con su respectivo nombre.
+Descripción: Utilice la etiqueta meta name description y agregué un parrafo con información resumida de mi web: "Drunky es una marca de ropa , que te trae primeras marcas de afuera , como Lacoste , Gucci , Versacce, sin necesidad de viajar al exterior"
+Palabras claves: Utilice la etiqueta meta name keywords y use las palabras "Drunky, ropa, calzado, primeras marcas,ofertas".
+
+
+
+17/05
+hoy termine la pagina de contacto, nosotros y marcas, utilice flexbox , mixins etc
+No me deja usar el 000webhost , ya que me pide que me suscriba si o si (premium)

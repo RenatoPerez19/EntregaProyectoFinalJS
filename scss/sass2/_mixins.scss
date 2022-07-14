@@ -1,0 +1,59 @@
+@import "../variables/variables";
+
+@mixin  flexibilizar-centrar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+@mixin fuentes {
+    font-family: $tipo-de-letra;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: bold;
+    
+}
+
+
+@mixin h1index{
+    background-color:black;
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@mixin principalnav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to right , white,rgb(71, 89, 122)  ,rgba(70, 139, 185, 0.863) , rgba(24, 88, 148, 0.801));
+    padding: 40px;
+    margin:0%;
+    gap: 10px;
+    
+}
+
+
+@mixin logo {
+
+    font-size: large;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    
+}
+
+@mixin footer {
+    background-color: rgb(27, 80, 129);
+    color: grey;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+@mixin boton{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,36 @@
+@import "../variables/variables";
+@import "../sass2/extend";
+@import "../sass2/mixins";
+
+.bodycontacto{
+    background-image:  linear-gradient(to right , white,rgb(126, 157, 214)  ,rgba(55, 161, 231, 0.863) , rgba(45, 145, 240, 0.801));
+}
+
+
+
+header{
+    .logo{
+        @include logo;
+
+    }
+        nav{
+            @include principalnav;
+        }
+        a{
+            font-size: $letra;
+            color: $color-letra;
+            text-decoration: none;
+            font-family: $tipo-de-letra;
+        } 
+}
+
+    
+.formulario{
+        text-align: center;
+        max-width: 25em;
+        padding:30px;
+        margin:45px;
+        font-weight: bold;
+        border-radius: 0.5em;
+        box-shadow: inset 1px 1px 22px 4px rgb(0, 0, 0);
+}
