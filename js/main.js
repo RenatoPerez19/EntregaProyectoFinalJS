@@ -71,10 +71,4 @@ function listadoProductosEnCarro() {
 
 //-----TERMINA CARRO---///
 
-if (productosEnCarro.length > 0) {
-    alert('Te invitamos a Iniciar sesion o Registrarte para iniciar su compra');
-    let nombre = prompt('ingrese su nombre');
-    let mail = prompt('ingrese su email');
-    let tel = prompt('ingrese su tel');
-    comprar(nombre, mail, tel, productosEnCarro);
-}
+
