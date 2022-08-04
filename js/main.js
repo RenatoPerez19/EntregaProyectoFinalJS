@@ -46,6 +46,14 @@ function meterAlCarro (objetoProducto){
 
     localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
     listadoProductosEnCarro();
+
+    Swal.fire({
+        title: "Excelente",
+        text: "Agregado al Carrito",
+        icon: "success",
+        timer: 800,
+        width: 400,
+      });
 }
 
 function BorrarDelCarro (id) {
