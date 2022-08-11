@@ -1,47 +1,37 @@
-let productos = [
-    {id: 102, nombre: "Zapatilla nike", precio:20000 },
-    {id: 103, nombre: "Zapatilla nike", precio: 20000},
-    {id: 104, nombre: "buzo drew", precio: 10000},
-    {id: 105, nombre: "Zapatillas lacoste", precio:25500 },
-    {id: 106, nombre: "Zapatilla nike", precio: 25500},
-    {id: 107, nombre: "Zapatilla nike", precio: 20000},
-    {id: 108, nombre: "zapatillas lacoste", precio: 25500},
-    {id: 109, nombre: "zapatillas lacoste", precio: 20500},
-    {id: 110, nombre: "campera nautica azul", precio: 30000},
-];
-
-let aux = localStorage.getItem("productosEnCarro");
-
-let productosEnCarro;
-
-if (!aux) {
-    productosEnCarro = [];
-}else {
-    productosEnCarro = JSON.parse(aux);
-    listadoProductosEnCarro();
+function clickEnProductos(id){
+    alert ("se selecciono el producto " + id)
 }
 
+fetch("/data.json")
+.then((resinicial)=>resinicial.json())
+.then((res)=>{
 
-
-function listadoProductos() {
-    let aux = '';
-    for (let i = 0; i < productos.length; i++) {
-        aux = aux +  `<div onclick= "meterAlCarro({id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}})" style="cursor: pointer;border: 1px solid black; ">
-                    <h3>${productos[i].nombre}</h3>
-                    <p>${productos[i].precio}</p>
-                    <p> id: ${productos[i].id}</p>
-                    </div> `;
+    const miArray= res;
+    
+    let htmlAux=``;
+    for(let i=0; i<miArray.length; i++){
+        htmlAux= htmlAux+ 
+                            `<div onclick="clickEnProductos (${miArray[i].id})">
+                            <strong>${miArray[i].name}</strong>
+                            <p style="color:green">${miArray[i].precio}</p>
+                            <img src="../img/zapatilla.jpg" alt="zapatilla">
+                            
+                            </div>
+                            <br/>`
     }
-    document.getElementById('div-productos').innerHTML = aux;
-}
+    document.getElementById("listadoDePrecios").innerHTML= htmlAux;
+})
+.catch((e)=>{
+    console.log(e)
+})
 
 
 
-listadoProductos();
+//listadoProductos();
 
 //-----CARRO-----//
 
-function meterAlCarro (objetoProducto){
+/*function meterAlCarro (objetoProducto){
     productosEnCarro.push(objetoProducto);
 
     localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
@@ -53,7 +43,7 @@ function meterAlCarro (objetoProducto){
         icon: "success",
         timer: 800,
         width: 400,
-      });
+    });
 }
 
 function BorrarDelCarro (id) {
@@ -68,7 +58,7 @@ function listadoProductosEnCarro() {
     let aux = '';
     for (let i = 0; i < productosEnCarro.length; i++) {
         aux = aux + `<div style ="border: 1px solid green;">
-                        <h3>${productosEnCarro[i].nombre}</h3>
+                        <h3>${productosEnCarro[i].name}</h3>
                         <p>${productosEnCarro[i].precio}</p>
                         <p> id: ${productosEnCarro[i].id}</p>
                         <p onclick= "BorrarDelCarro(${i})" style = "cursor: pointer;"><button>BORRAR DEL CARRO</button></p>
@@ -78,5 +68,5 @@ function listadoProductosEnCarro() {
 }
 
 //-----TERMINA CARRO---///
-
+*/
 
