@@ -1,72 +1,104 @@
-function clickEnProductos(id){
-    alert ("se selecciono el producto " + id)
+const cards= document.getElementById(`cards`)
+const items=document.getElementById(`items`)
+const footer= document.getElementById(`footer`)
+const templateCard= document.getElementById(`template-card`).content
+const fragment= document.createDocumentFragment( )
+const templateFooter= document.getElementById(`template-footer`).content
+const templateCarrito= document.getElementById(`template-carrito`).content
+
+let carrito={}
+
+
+
+
+document.addEventListener(`DOMContentLoaded`, ()=>{
+    fetchData()
+})
+cards.addEventListener(`click`, e=>{
+    addCarrito(e)
+})
+
+
+
+const fetchData= async () =>{
+    try{
+        const res=await fetch(`/api.json`)
+        const data=await res.json()
+        //console.log(data)
+        pintarCards(data)
+    }catch (error){
+        console.log(error)
+    }
 }
 
-fetch("/data.json")
-.then((resinicial)=>resinicial.json())
-.then((res)=>{
+const pintarCards = data=>{
+    data.forEach(producto=>{
+        templateCard.querySelector(`h5`).textContent= producto.title
+        templateCard.querySelector(`p`).textContent=producto.precio
+        templateCard.querySelector(`img`).setAttribute("src", producto.thumbnailUrl)
+        templateCard.querySelector(`.btn-dark`).dataset.id=producto.id
+        const clone = templateCard.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    cards.appendChild(fragment)
 
-    const miArray= res;
+}
+
+const addCarrito= e=>{
+    //console.log(e.target)
+    //console.log(e.target.classList.contains(`btn-dark`))
+    if(e.target.classList.contains(`btn-dark`)){
+        setCarrito(e.target.parentElement)
+
+    }
+    e.stopPropagation()
+}
+
+const setCarrito= objeto=>{
+    //console.log(objeto)
+    const producto={
+        id: objeto.querySelector(`.btn-dark`).dataset.id,
+        title: objeto.querySelector(`h5`).textContent,
+        precio: objeto.querySelector(`p`).textContent,
+        cantidad: 1
+    }
+
+    if(carrito.hasOwnProperty(producto.id)){
+    producto.cantidad = carrito[producto.id].cantidad +1
+}
+
+carrito[producto.id] ={...producto}
+pintarCarrito()
+
+}
+
+const pintarCarrito= ()=>{
+    console.log(carrito)
+    items.innerHTML=""
+    Object.values(carrito).forEach(producto=>{
+        templateCarrito.querySelector(`th`).textcontent=producto.id
+        templateCarrito.querySelectorAll(`td`)[0].textcontent=producto.title
+        templateCarrito.querySelector(`.btn-info`).dataset=producto.cantidad  
+        templateCarrito.querySelector(`.btn-danger`).dataset=producto.id
+        templateCarrito.querySelector(`span`).producto.cantidad * producto.precio
+        const clone= templateCarrito.cloneNode(true)
+        fragment.appendChild(clone)
+
+    })
+
+    items.appendChild(fragment)
+
+    pintarFooter()
     
-    let htmlAux=``;
-    for(let i=0; i<miArray.length; i++){
-        htmlAux= htmlAux+ 
-                            `<div onclick="clickEnProductos (${miArray[i].id})">
-                            <strong>${miArray[i].name}</strong>
-                            <p style="color:green">${miArray[i].precio}</p>
-                            <img src="../img/zapatilla.jpg" alt="zapatilla">
-                            
-                            </div>
-                            <br/>`
+}
+const pintarFooter= ()=>{
+    footer.innerHTML=""
+    if(Object.keys(carrito).length===0){
+        footer.innerHTML=`
+        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+        `
     }
-    document.getElementById("listadoDePrecios").innerHTML= htmlAux;
-})
-.catch((e)=>{
-    console.log(e)
-})
 
-
-
-//listadoProductos();
-
-//-----CARRO-----//
-
-/*function meterAlCarro (objetoProducto){
-    productosEnCarro.push(objetoProducto);
-
-    localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
-    listadoProductosEnCarro();
-
-    Swal.fire({
-        title: "Excelente",
-        text: "Agregado al Carrito",
-        icon: "success",
-        timer: 800,
-        width: 400,
-    });
+    const nCantidad = Object.values(carrito).reduce((acc , {cantidad})=> acc + cantidad , 0)
 }
-
-function BorrarDelCarro (id) {
-    productosEnCarro.splice(id, 1);
-
-    localStorage.setItem("productosEnCarro", JSON.stringify(productosEnCarro));
-    listadoProductosEnCarro();
-}
-
-
-function listadoProductosEnCarro() {
-    let aux = '';
-    for (let i = 0; i < productosEnCarro.length; i++) {
-        aux = aux + `<div style ="border: 1px solid green;">
-                        <h3>${productosEnCarro[i].name}</h3>
-                        <p>${productosEnCarro[i].precio}</p>
-                        <p> id: ${productosEnCarro[i].id}</p>
-                        <p onclick= "BorrarDelCarro(${i})" style = "cursor: pointer;"><button>BORRAR DEL CARRO</button></p>
-                    </div> `;
-    }
-    document.getElementById('div-carrito').innerHTML = aux;
-}
-
-//-----TERMINA CARRO---///
-*/
 
