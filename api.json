@@ -1,38 +1,38 @@
 [
     {
-        "precio": 500,
+        "precio": 30000,
         "id": 1,
-        "title": "Café",
-        "thumbnailUrl": "https://picsum.photos/id/0/600"
+        "title": "zapatilla lacoste",
+        "thumbnailUrl": "/img/lacostezapas.jpg"
     },
     {
-        "precio": 300,
+        "precio": 25000,
         "id": 2,
-        "title": "Pizza",
-        "thumbnailUrl": "https://picsum.photos/id/10/600"
+        "title": "zapatilla lacoste",
+        "thumbnailUrl": "/img/lacostezapas2.jpg"
     },
     {
-        "precio": 100,
+        "precio": 15000,
         "id": 3,
-        "title": "Agua",
+        "title": "zapatilla adidas",
         "thumbnailUrl": "/img/zapatillaadidas4.webp"
     },
     {
-        "precio": 50,
+        "precio":30000,
         "id": 4,
-        "title": "Sandía",
+        "title": "campera nautica",
         "thumbnailUrl": "/img/campera nautica2.jpg"
     },
     {
-        "precio": 10,
+        "precio": 30000,
         "id": 5,
-        "title": "Mango",
+        "title": "campera nautica",
         "thumbnailUrl": "/img/campera nautica2.jpg"
     },
     {
-        "precio": 150,
+        "precio":20000,
         "id": 6,
-        "title": "Chela",
-        "thumbnailUrl": "/img/campera nautica2.jpg"
+        "title": "campera nautica",
+        "thumbnailUrl": "/img/campera nautica.jpg"
     }
 ]
