@@ -1,0 +1,27 @@
+let stockProductos = [
+    {id:1 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1, talle:40, img: "../img/conjuntodrew.jpg"},
+    {id:2 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:3 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:4 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:5 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:6 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:7 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:8 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:9 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:10 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1, talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:11 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:12, nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:13, nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:15 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:16 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1, talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:17 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:18 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:19 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:20 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:21 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1, talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:22 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1, talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:23 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 , cantidad: 1, talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:24 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"},
+    {id:25 , nombre:"zapatilla adidas " , tipo: "zapatilla" , precio:20000 ,  cantidad: 1,talle:40, img: "../img/zapatillaadidas6.jpg"}
+    
+]
